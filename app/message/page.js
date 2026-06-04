@@ -1,13 +1,9 @@
 // app/message/page.js
 
 async function getMessage() {
-  const response = await fetch(
-    "http://localhost:3000/api/message"
-  );
-
-  const data = await response.json();
-
-  return data;
+  const { GET } = await import("../api/message/route");
+  const response = await GET();
+  return response.json();
 }
 
 export default async function MessagePage() {

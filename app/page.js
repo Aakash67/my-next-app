@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProductImage from "./components/ProductImage";
 
 export default function Home() {
   return (
@@ -6,12 +6,7 @@ export default function Home() {
       <h1 style={{ fontSize: "28px", fontWeight: "bold", color: "#111827", marginBottom: "24px" }}>
         Optimized Image
       </h1>
-      <Image
-        src="/product.jpg"
-        alt="Product"
-        width={600}
-        height={400}
-      />
+      <ProductImage />
     </div>
   );
 }
